@@ -1,0 +1,141 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:cursive
+    
+}
+body {
+    color: blueviolet;
+    background-color: #a6e1fce5;
+}
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+
+input[type="file"], input[type="text"], select {
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Preview Box */
+.preview-box {
+    width: 600px;
+    height: 450px;
+    border: 2px dashed #ccc;
+    margin: 20px auto;
+    display: flex;
+    overflow: scroll;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+}
+
+
+.preview-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+#successMessage {
+    color: red;
+    font-size: 1.5em; /* Adjust size as needed */
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Landing Page Styles */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #7cd5f0e5, #f1f6f7);
+    color: blueviolet;
+    text-align: center;
+}
+
+.landing-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.landing-container p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color:white;
+    background-color: #9994db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #104E8B;
+}
+
+/* Hidden Element */
+.hidden {
+    display: none;
+}
+
+/* History Container Styling */
+#historyContainer {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#historyList li {
+    margin-bottom: 5px;
+}

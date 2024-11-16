@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for image preview and hidden class */
+        .hidden {
+            display: none;
+        }
+        .preview-box {
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            padding: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <h1 style="font-size: 48px; color: purple;">IMAGE TO PDF CONVERTER</h1>
+        <p>Upload images, apply filters, and preview each page before creating the PDF!</p>
+        
+        <input type="file" id="imageUpload" multiple accept="image/*">
+
+        <!-- Filter, Watermark, and Enhancement Options -->
+        <div class="options-container">
+            <label for="filterSelect">Apply Filter:</label>
+            <select id="filterSelect">
+                <option value="">None</option>
+                <option value="grayscale(100%)">Grayscale</option>
+                <option value="sepia(100%)">Sepia</option>
+                <option value="blur(5px)">Blur</option>
+            </select>
+            <label for="enhancementSelect">Enhance Image:</label>
+            <select id="enhancementSelect">
+                <option value="">None</option>
+                <option value="brightness(1.2)">Brightness</option>
+                <option value="contrast(1.5)">Contrast</option>
+                <option value="saturate(2)">Saturation</option>
+            </select>
+            
+            <label for="watermarkText">Watermark Text:</label>
+            <input type="text" id="watermarkText" placeholder="Enter watermark">
+        </div>
+
+        <!-- PDF Filename Input -->
+        <div class="options-container"> 
+            <label for="pdfFilename">PDF Filename:</label>
+            <input type="text" id="pdfFilename" placeholder="Enter PDF name">
+            <label for="pageSizeSelect">Select Page Size:</label>
+            <select id="pageSizeSelect">
+                <option value="a4">A4</option>
+                <option value="a3">A3</option>
+                <option value="letter">Letter</option>
+                <option value="legal">Legal</option>
+            </select>
+        </div>
+        <!-- Image Preview Box -->
+        <div id="previewBox" class="preview-box">
+            <img id="previewImage" alt="Preview" class="hidden">
+        </div>
+
+        <!-- Next Image and Create PDF Buttons -->   
+        <button id="nextImageBtn">Next Image</button>
+        <button id="convertBtn">Create PDF</button>
+
+        <p id="successMessage" class="hidden">PDF created successfully!</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="myJScode.js"></script>
+</body>
+</html>
